@@ -28,6 +28,9 @@
                 <version>3.0.2</version>
 
                 <configuration>
+
+
+
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
@@ -39,6 +42,8 @@
             </plugin>
 
         </plugins>
+
+
     </build>
     <dependencies>
         <dependency>

@@ -16,6 +16,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Set;
 
 /**
@@ -40,9 +41,12 @@ public class Field extends JPanel
     {
 
 
+
         Image im = null;
         try {
-            im = ImageIO.read(new File("C:\\Gameshoot\\src\\main\\java\\game\\res\\Background1.png"));
+            InputStream is = this.getClass().getResourceAsStream( "/images/Backg.png" );
+           im = ImageIO.read(is);
+
         } catch (IOException e) {}
         g.drawImage(im, 0, 0, null);
 

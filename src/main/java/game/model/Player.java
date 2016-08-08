@@ -4,6 +4,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by Kydp9 on 04.08.2016.
@@ -45,7 +46,10 @@ public class Player extends CollisionObject  implements  Movable
 */
         Image im = null;
         try {
-            im = ImageIO.read(new File("C:\\Gameshoot\\src\\main\\java\\game\\res\\player0000.png"));
+
+            InputStream is = this.getClass().getResourceAsStream( "/images/player0000.png" );
+            im = ImageIO.read(is);
+
         } catch (IOException e) {}
         graphics.drawImage(im, leftUpperCornerX, leftUpperCornerY,getWidth(), getHeight(), null);
 

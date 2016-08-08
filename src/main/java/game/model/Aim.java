@@ -4,6 +4,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by ikydp on 08.08.2016.
@@ -21,7 +22,9 @@ public class Aim extends GameObject {
         int leftUpperCornerY = getY() - getHeight() / 2;
         Image im = null;
         try {
-            im = ImageIO.read(new File("C:\\Gameshoot\\src\\main\\java\\game\\res\\aim.png"));
+            InputStream is = this.getClass().getResourceAsStream( "/images/aim.png" );
+            im = ImageIO.read(is);
+
         } catch (IOException e) {}
         graphics.drawImage(im, getX()-50, getY()-50,100, 100, null);
     }

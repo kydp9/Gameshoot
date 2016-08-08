@@ -5,7 +5,7 @@ package game.model;
 
 import game.controller.EventListener;
 
-import java.nio.file.Paths;
+
 import java.util.Iterator;
 import java.util.Random;
 import java.util.Set;
